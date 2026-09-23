@@ -41,6 +41,10 @@
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblQArticulos = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblQMuestra = new System.Windows.Forms.Label();
+            this.lblTotalMuestra = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -50,10 +54,10 @@
             // lblRubro
             // 
             this.lblRubro.AutoSize = true;
-            this.lblRubro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRubro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRubro.Location = new System.Drawing.Point(66, 27);
             this.lblRubro.Name = "lblRubro";
-            this.lblRubro.Size = new System.Drawing.Size(44, 16);
+            this.lblRubro.Size = new System.Drawing.Size(49, 16);
             this.lblRubro.TabIndex = 0;
             this.lblRubro.Text = "Rubro";
             // 
@@ -69,8 +73,8 @@
             // btnMostrar
             // 
             this.btnMostrar.BackColor = System.Drawing.Color.Linen;
-            this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrar.Location = new System.Drawing.Point(347, 24);
+            this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrar.Location = new System.Drawing.Point(330, 27);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(110, 23);
             this.btnMostrar.TabIndex = 2;
@@ -80,10 +84,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblTotalMuestra);
+            this.panel1.Controls.Add(this.lblQMuestra);
             this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.lblTotal);
+            this.panel1.Controls.Add(this.lblQArticulos);
             this.panel1.Location = new System.Drawing.Point(14, 156);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(587, 263);
+            this.panel1.Size = new System.Drawing.Size(587, 321);
             this.panel1.TabIndex = 3;
             // 
             // menuStrip1
@@ -152,12 +160,54 @@
             this.panel2.Size = new System.Drawing.Size(485, 75);
             this.panel2.TabIndex = 5;
             // 
+            // lblQArticulos
+            // 
+            this.lblQArticulos.AutoSize = true;
+            this.lblQArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQArticulos.Location = new System.Drawing.Point(97, 283);
+            this.lblQArticulos.Name = "lblQArticulos";
+            this.lblQArticulos.Size = new System.Drawing.Size(143, 15);
+            this.lblQArticulos.TabIndex = 6;
+            this.lblQArticulos.Text = "Cantidad de articulos";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(393, 283);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(39, 15);
+            this.lblTotal.TabIndex = 7;
+            this.lblTotal.Text = "Total";
+            // 
+            // lblQMuestra
+            // 
+            this.lblQMuestra.BackColor = System.Drawing.Color.Linen;
+            this.lblQMuestra.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblQMuestra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQMuestra.Location = new System.Drawing.Point(253, 282);
+            this.lblQMuestra.Name = "lblQMuestra";
+            this.lblQMuestra.Size = new System.Drawing.Size(100, 23);
+            this.lblQMuestra.TabIndex = 8;
+            this.lblQMuestra.Text = ".";
+            // 
+            // lblTotalMuestra
+            // 
+            this.lblTotalMuestra.BackColor = System.Drawing.Color.Linen;
+            this.lblTotalMuestra.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotalMuestra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalMuestra.Location = new System.Drawing.Point(438, 282);
+            this.lblTotalMuestra.Name = "lblTotalMuestra";
+            this.lblTotalMuestra.Size = new System.Drawing.Size(95, 23);
+            this.lblTotalMuestra.TabIndex = 9;
+            this.lblTotalMuestra.Text = ".";
+            // 
             // frmGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(613, 431);
+            this.ClientSize = new System.Drawing.Size(613, 500);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -165,6 +215,7 @@
             this.Name = "frmGestion";
             this.Text = "Gestion";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -190,6 +241,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblQArticulos;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblQMuestra;
+        private System.Windows.Forms.Label lblTotalMuestra;
     }
 }
 
