@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pryInstanciaEvManassero
 {
-    public partial class Form1 : Form
+    public partial class frmGestion : Form
     {
-        public Form1()
+        public frmGestion()
         {
             InitializeComponent();
         }
